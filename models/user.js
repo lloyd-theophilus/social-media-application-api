@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true, 
-        maxlength: 8
+        maxlength: 200
     },
     profilePicture: {
         type: String,
@@ -36,7 +36,8 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-        timestamps: true
-});
+},
+ { timestamps: true }
+);
 
 module.exports = mongoose.model('User', userSchema);
