@@ -6,6 +6,10 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 
 
+const userRoute = require('./routes/User');
+const authRoute = require('./routes/Auth');
+
+
 
 // Dotenv config
 dotenv.config();
@@ -30,6 +34,10 @@ app.use(helmet());  // for security purpose
 app.use(morgan('common'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Implementing routes
+app.use('/api/users', userRoute);
+app.use('/api/auth', authRoute);
 
 
 
