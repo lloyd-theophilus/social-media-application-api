@@ -8,6 +8,7 @@ const morgan = require('morgan');
 
 const userRoute = require('./routes/user');
 const authRoute = require('./routes/auth');
+const postRoute = require('./routes/post');
 
 
 
@@ -37,6 +38,7 @@ app.use(express.json());
 // Implementing routes
 app.use('/api/users', userRoute);
 app.use('/api/auth', authRoute);
+app.use('/api/posts', postRoute); 
 
 
 
