@@ -4,7 +4,7 @@ const postSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
-        maxlength: 20
+        maxlength: 30
     },
     content: {
         type: String,
